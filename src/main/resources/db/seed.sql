@@ -1,0 +1,229 @@
+INSERT OR IGNORE INTO customers (
+    id,
+    customer_number,
+    first_name,
+    surname,
+    national_id,
+    address,
+    phone,
+    email,
+    employed,
+    employer_name,
+    employer_address,
+    active
+)
+VALUES
+(
+    1,
+    'CUST001',
+    'Kago',
+    'Molefe',
+    'ID001',
+    'Gaborone',
+    '71000001',
+    'kago@example.com',
+    1,
+    'Debswana',
+    'Gaborone',
+    1
+),
+(
+    2,
+    'CUST002',
+    'Neo',
+    'Dube',
+    'ID002',
+    'Molepolole',
+    '71000002',
+    'neo@example.com',
+    1,
+    'Botswana Power Corporation',
+    'Gaborone',
+    1
+),
+(
+    3,
+    'CUST003',
+    'Boitumelo',
+    'Kebonang',
+    'ID003',
+    'Letlhakeng',
+    '71000003',
+    'boitumelo@example.com',
+    0,
+    NULL,
+    NULL,
+    1
+),
+(
+    4,
+    'CUST004',
+    'Thato',
+    'Moyo',
+    'ID004',
+    'Maun',
+    '71000004',
+    'thato@example.com',
+    1,
+    'Maun Council',
+    'Maun',
+    1
+),
+(
+    5,
+    'CUST005',
+    'Lorato',
+    'Kgosidintsi',
+    'ID005',
+    'Kanye',
+    '71000005',
+    'lorato@example.com',
+    1,
+    'BotswanaPost',
+    'Gaborone',
+    1
+);
+
+INSERT OR IGNORE INTO users (
+    id,
+    username,
+    password_hash,
+    role,
+    customer_id,
+    active
+)
+VALUES
+(
+    1,
+    'officer',
+    'officer123',
+    'OFFICER',
+    NULL,
+    1
+),
+(
+    2,
+    'customer1',
+    'customer123',
+    'CUSTOMER',
+    1,
+    1
+);
+
+INSERT OR IGNORE INTO accounts (
+    id,
+    customer_id,
+    account_number,
+    account_type,
+    balance,
+    branch,
+    status,
+    date_opened
+)
+VALUES
+(
+    1,
+    1,
+    'SAV1001',
+    'SAVINGS',
+    2500.00,
+    'Main Branch',
+    'ACTIVE',
+    date('now')
+),
+(
+    2,
+    1,
+    'INV1001',
+    'INVESTMENT',
+    5000.00,
+    'Main Branch',
+    'ACTIVE',
+    date('now')
+),
+(
+    3,
+    2,
+    'CHQ1001',
+    'CHEQUE',
+    7200.00,
+    'Main Branch',
+    'ACTIVE',
+    date('now')
+),
+(
+    4,
+    3,
+    'SAV1002',
+    'SAVINGS',
+    1000.00,
+    'Letlhakeng Branch',
+    'ACTIVE',
+    date('now')
+),
+(
+    5,
+    4,
+    'INV1002',
+    'INVESTMENT',
+    12000.00,
+    'Maun Branch',
+    'ACTIVE',
+    date('now')
+);
+
+INSERT OR IGNORE INTO transactions (
+    id,
+    account_id,
+    transaction_type,
+    amount,
+    transaction_time,
+    description,
+    balance_after
+)
+VALUES
+(
+    1,
+    1,
+    'OPENING_DEPOSIT',
+    2500.00,
+    datetime('now'),
+    'Opening savings deposit',
+    2500.00
+),
+(
+    2,
+    2,
+    'OPENING_DEPOSIT',
+    5000.00,
+    datetime('now'),
+    'Opening investment deposit',
+    5000.00
+),
+(
+    3,
+    3,
+    'OPENING_DEPOSIT',
+    7200.00,
+    datetime('now'),
+    'Opening cheque deposit',
+    7200.00
+),
+(
+    4,
+    4,
+    'OPENING_DEPOSIT',
+    1000.00,
+    datetime('now'),
+    'Opening savings deposit',
+    1000.00
+),
+(
+    5,
+    5,
+    'OPENING_DEPOSIT',
+    12000.00,
+    datetime('now'),
+    'Opening investment deposit',
+    12000.00
+);

@@ -1,0 +1,100 @@
+.root {
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+}
+
+.app-background {
+    -fx-background-color: #f4f7fb;
+}
+
+.login-background {
+    -fx-background-color:
+            linear-gradient(
+                    to bottom right,
+                    #0d2945,
+                    #17365d,
+                    #28577f
+            );
+}
+
+.login-card {
+    -fx-background-color: white;
+    -fx-background-radius: 14px;
+    -fx-padding: 35px;
+
+    -fx-effect:
+            dropshadow(
+                    gaussian,
+                    rgba(0, 0, 0, 0.25),
+                    20,
+                    0.1,
+                    0,
+                    6
+            );
+}
+
+.bank-title {
+    -fx-text-fill: #17365d;
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+}
+
+.subtitle {
+    -fx-text-fill: #c6922d;
+    -fx-font-size: 16px;
+}
+
+.app-header {
+    -fx-background-color: #17365d;
+}
+
+.header-title {
+    -fx-text-fill: white;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.header-user {
+    -fx-text-fill: #eaf1f8;
+}
+
+.button {
+    -fx-cursor: hand;
+    -fx-background-radius: 6px;
+    -fx-padding: 9px 16px;
+}
+
+.primary-button {
+    -fx-background-color: #17365d;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.primary-button:hover {
+    -fx-background-color: #28577f;
+}
+
+.text-field,
+.password-field,
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 8px;
+}
+
+.error-label {
+    -fx-text-fill: #b00020;
+}
+
+.status-bar {
+    -fx-background-color: #eaf1f8;
+    -fx-border-color: #d4dde7;
+    -fx-border-width: 1px 0 0 0;
+}
+
+.list-view {
+    -fx-border-color: #dbe3ec;
+    -fx-background-color: white;
+}
